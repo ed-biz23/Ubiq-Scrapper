@@ -23,7 +23,7 @@ class Ubiq(object):
         for cookie in self.driver.get_cookies():
             c = {cookie['name']: cookie['value']}
             self.s.cookies.update(c)
-            self.driver.quit()
+        self.driver.quit()
 
         print(datetime.datetime.now().strftime('%X'), 'Getting form key.')
         r = self.s.get('https://www.ubiqlife.com/')
